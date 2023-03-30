@@ -1,0 +1,153 @@
+.content {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: -29px;
+    left: -10px;
+    z-index: -2;
+    
+}
+
+#penguin-body{
+    animation-name: shivering;
+    animation-duration: 0.1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shivering {
+    0% {transform: translate(-2px, 0px)}
+    50% {transform: translate(0px, 1px)}
+    100% {transform: translate(2px, 0px)}
+}
+
+.penguin{
+    z-index: 5;
+    transform: translateX(400px) translateY(150px);
+    
+}
+
+button{
+    z-index: 5;
+    margin-left: 20vw;
+
+}
+
+.float{
+    transform: translateX(400px) translateY(1500px);
+    animation-name: fairy;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#right-wing{
+    animation: rwing;
+    animation-duration: 0.05s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom right;
+}
+
+@keyframes rwing {
+    0% {transform: scaleX(0.8)}
+    50% {transform: scaleX(1)}
+    100% {transform: scaleX(0.8)}
+}
+
+#left-wing{
+    animation: rwing;
+    animation-duration: 0.05s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom left;
+}
+
+@keyframes fairy {
+    0% {transform: translateY(150px) translateX(400px)}
+    50% {transform: translateY(160px) translateX(400px)}
+    100% {transform: translateY(150px) translateX(400px)}
+}
+
+#eyes {
+    animation-name: blink;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transform-origin: center center;
+}
+
+@keyframes blink {
+    0% {transform: scaleY(1)}
+    4% {transform: scaleY(0)}
+    8% {transform: scaleY(1)}
+    100% {transform: scaleY(1)}
+}
+
+#right-arm{
+    animation: r-arm 2s infinite;
+    transform-origin: 30% center;
+}
+
+@keyframes r-arm {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(5deg);}
+    100% {transform: rotate(0deg);}
+}
+
+#left-arm{
+    animation: l-arm 2s infinite;
+    transform-origin: 70% center;
+}
+
+@keyframes l-arm {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(-5deg);}
+    100% {transform: rotate(0deg);}
+}
+
+.appear {
+    animation: appearance 10s cubic-bezier(1,0,.63,.48);
+}
+
+@keyframes appearance {
+    0% {transform: translateX(950px) translateY(180px) scale(0); }
+    100% {transform: translateX(400px) translateY(150px) scale(1); }
+}
+
+.off{
+    display: none;
+}
+
+#text{
+    cursor: pointer;
+    transform-origin: center 65%;
+}
+
+#text:hover {
+    transform: scale(1.1);
+}
+
+#message{
+    position: absolute;
+    top: 30vh;
+    left: 48vw;
+    z-index: 5;
+    background-color: azure;
+    width: 20vw;
+    height: 20vh;
+    border: 5px solid rgb(107, 186, 239) white rgb(107, 186, 239) white;
+    border-radius: 10px;
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fade-in {
+    0% {display: none;}
+    100% {display: block;}
+}
+
+
+
+
+
+
