@@ -1,11 +1,14 @@
 .content {
-    width: 100vw;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     position: absolute;
-    top: -29px;
-    left: -10px;
-    z-index: -2;
+    z-index: -1;
     
+}
+
+.penguin{
+    transform: translateX(30vw) translateY(30vh);
+    width: 20vw;
 }
 
 #penguin-body{
@@ -20,56 +23,19 @@
     100% {transform: translate(2px, 0px)}
 }
 
-.penguin{
-    z-index: 5;
-    transform: translateX(400px) translateY(150px);
-    
-}
-
-button{
-    z-index: 5;
-    margin-left: 20vw;
-
-}
-
 .float{
-    transform: translateX(400px) translateY(1500px);
-    animation-name: fairy;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-
-#right-wing{
-    animation: rwing;
-    animation-duration: 0.05s;
-    animation-iteration-count: infinite;
-    transform-origin: bottom right;
-}
-
-@keyframes rwing {
-    0% {transform: scaleX(0.8)}
-    50% {transform: scaleX(1)}
-    100% {transform: scaleX(0.8)}
-}
-
-#left-wing{
-    animation: rwing;
-    animation-duration: 0.05s;
-    animation-iteration-count: infinite;
-    transform-origin: bottom left;
+    transform: translateX(30vw) translateY(30vw);
+    animation: fairy 2s infinite ease-in-out;
 }
 
 @keyframes fairy {
-    0% {transform: translateY(150px) translateX(400px)}
-    50% {transform: translateY(160px) translateX(400px)}
-    100% {transform: translateY(150px) translateX(400px)}
+    0% {transform: translate(30vw,30vh)}
+    50% {transform: translate(30vw,33vh)}
+    100% {transform: translate(30vw,30vh)}
 }
 
 #eyes {
-    animation-name: blink;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+    animation: blink 3s infinite;
     transform-origin: center center;
 }
 
@@ -78,6 +44,20 @@ button{
     4% {transform: scaleY(0)}
     8% {transform: scaleY(1)}
     100% {transform: scaleY(1)}
+}
+#right-wing{
+    animation: wing 0.05s infinite;
+    transform-origin: bottom right;
+}
+
+@keyframes wing {
+    from {transform: scaleX(0.8)}
+    to {transform: scaleX(1)}
+}
+
+#left-wing{
+    animation: wing 0.05s infinite;
+    transform-origin: bottom left;
 }
 
 #right-arm{
@@ -97,9 +77,9 @@ button{
 }
 
 @keyframes l-arm {
-    0% {transform: rotate(0deg);}
-    50% {transform: rotate(-5deg);}
-    100% {transform: rotate(0deg);}
+    0% {transform: rotate(-5deg);}
+    50% {transform: rotate(-10deg);}
+    100% {transform: rotate(-5deg);}
 }
 
 .appear {
@@ -107,8 +87,8 @@ button{
 }
 
 @keyframes appearance {
-    0% {transform: translateX(950px) translateY(180px) scale(0); }
-    100% {transform: translateX(400px) translateY(150px) scale(1); }
+    0% {transform: translate(67vw,27vh) scale(0); }
+    100% {transform: translate(30vw,30vh) scale(1); }
 }
 
 .off{
@@ -124,27 +104,7 @@ button{
     transform: scale(1.1);
 }
 
-#message{
-    position: absolute;
-    top: 30vh;
-    left: 48vw;
-    z-index: 5;
-    background-color: azure;
-    width: 20vw;
-    height: 20vh;
-    border: 5px solid rgb(107, 186, 239) white rgb(107, 186, 239) white;
-    border-radius: 10px;
-    display: none;
-}
 
-.fade-in {
-    animation: fadeIn 2s ease-out;
-}
-
-@keyframes fade-in {
-    0% {display: none;}
-    100% {display: block;}
-}
 
 
 

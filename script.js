@@ -10,10 +10,6 @@ act.addEventListener("click", () =>{
         penguin.classList.add("float")
     }, 10000)
     
-    setTimeout(()=>{
-        message.classList.add("fade-in")
-        
-    },11000)
     act.classList.add("off")
 })
 
